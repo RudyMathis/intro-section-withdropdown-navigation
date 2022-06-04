@@ -1,16 +1,4 @@
-/* - Almost White: hsl(0, 0%, 98%)
-- Medium Gray: hsl(0, 0%, 41%)
-- Almost Black: hsl(0, 0%, 8%)
-
-## Typography
-
-### Body Copy
-
-- Font size (paragraph): 18px
-
-### Font
-- Family: [Epilogue](https://fonts.google.com/specimen/Epilogue)
-- Weights: 500, 700 */
+/* - Weights: 500, 700 */
 
 /* golbal */
 @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
@@ -43,6 +31,10 @@ p {
     margin: 1em 0;
 }
 
+.clickable {
+    cursor: pointer;
+}
+
 
 body { 
     display: flex;
@@ -50,13 +42,58 @@ body {
     height: 100vh;
 }
 
+.show{
+
+}
+
+.hide{
+    display: none;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    background-color: var(--White);
+    border: none;
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
 /* header */
 
 header {
     display: flex;
     justify-content: space-between;
-    /* margin-bottom: 1em; */
     padding: 1em;
+}
+
+.menu {
+    position:absolute;
+    background-color: var(--White);
+    right: 0px;
+    height: 100vh;
+    width: 75%;
+    z-index: 2;
+    padding: 4em 0 0 2em;
+}
+
+.menu-close {
+    position:relative;
+    z-index: 3;
+}
+
+.list-parent{
+
+}
+
+.list-child{
+    text-indent: 20px;
+}
+
+.btn-parent {
 }
 
 /* main */
