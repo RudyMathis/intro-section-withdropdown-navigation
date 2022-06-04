@@ -16,6 +16,7 @@
     font-size: 18px;
     font-family: 'Epilogue', sans-serif;
     line-height: 1.2rem;
+    color: var(--Almost-Black);
 }
 
 h1 {
@@ -40,10 +41,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-}
-
-.show{
-
+    
 }
 
 .hide{
@@ -60,6 +58,17 @@ body {
 
 li {
     list-style: none;
+    color: var(--Medium-Grey);
+    margin-top: 1em;
+}
+
+.modal {
+    position: absolute;
+    z-index: 0;
+    background-color: var(--Almost-Black);
+    opacity: .75;
+    height: 100%;
+    width: 100%;
 }
 
 /* header */
@@ -75,9 +84,9 @@ header {
     background-color: var(--White);
     right: 0px;
     height: 100vh;
-    width: 75%;
+    width: 65%;
     z-index: 2;
-    padding: 4em 0 0 2em;
+    padding: 4em 2em;
 }
 
 .menu-close {
@@ -94,13 +103,31 @@ header {
 }
 
 .btn-parent {
+    color: var(--Medium-Grey);
+}
+
+.arrow {
+    margin-left: .75em;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5em;
+}
+
+.register {
+    border: 1px solid var(--Almost-Black);
+    padding: .5em 3em;
+    border-radius: .5em;
+    margin-top: 1em;
 }
 
 /* main */
 
 main {
     text-align: center;
-
 }
 
 .hero-mobile {
@@ -133,3 +160,5 @@ footer {
     max-height: 26px;
     margin-right: 1.8em;
 }
+
+/* animation for menu */

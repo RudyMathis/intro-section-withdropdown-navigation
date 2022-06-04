@@ -14,6 +14,7 @@
 		<title>Frontend Mentor | Intro section with dropdown navigation</title>
 	</head>
 	<body>
+		<div class="modal hide"></div>
 		<header>
 			<img src="./images/logo.svg" alt="Snap-Logo" />
 			<button class="btn">
@@ -26,55 +27,54 @@
 			</button>
 		</header>
 		<!-- navigation -->
-		<!-- <nav class="menu hide">
-			<li>
-				<button class="feature btn">
-					<p>Features</p>
-
-					<img src="./images/icon-arrow-down.svg" alt="Features-Expand" />
-					<img src="./images/icon-arrow-up.svg" alt="Features-Expand" />
-				</button>
-			</li>
-			<ul>
-				<li><img src="./images/icon-todo.svg" alt="Todo" /> Todo List</li>
-				<li>
-					<img src="./images/icon-calendar.svg" alt="Calendar" /> Calendar
-				</li>
-				<li>
-					<img src="./images/icon-reminders.svg" alt="Reminders" /> Reminders
-				</li>
-				<li>
-					<img src="./images/icon-planning.svg" alt="Planning" /> Planning
-				</li>
-			</ul>
-			<ul>
-				<button class="company btn">
-					<h2>Company</h2>
-					<img src="./images/icon-arrow-down.svg" alt="Features-Expand" />
-					<img src="./images/icon-arrow-up.svg" alt="Features-Expand" />
-				</button>
-				<li>History</li>
-				<li>Our Team</li>
-				<li>Blog</li>
-			</ul>
-			<p>Careers</p>
-			<p>About</p>
-			<button>Login</button>
-			<button>Register</button>
-		</nav> -->
 		<nav class="menu hide">
 			<ul>
 				<li class="list-parent">
-					<button class="btn btn-parent">Features</button>
+					<button class="btn btn-parent">
+						Features
+						<img
+							src="./images/icon-arrow-down.svg"
+							alt="nav feature"
+							class="arrow"
+						/>
+						<img
+							src="./images/icon-arrow-up.svg"
+							alt="nav feature"
+							class="arrow hide"
+						/>
+					</button>
 					<ul class="hide">
-						<li class="list-child">Todo List</li>
-						<li class="list-child">Calendar</li>
-						<li class="list-child">Reminders</li>
-						<li class="list-child">Planning</li>
+						<li class="list-child">
+							<img src="./images/icon-todo.svg" alt="icon-todo" /> Todo List
+						</li>
+						<li class="list-child">
+							<img src="./images/icon-calendar.svg" alt="icon-calendar" />
+							Calendar
+						</li>
+						<li class="list-child">
+							<img src="./images/icon-reminders.svg" alt="icon-reminders" />
+							Reminders
+						</li>
+						<li class="list-child">
+							<img src="./images/icon-planning.svg" alt="icon-planning" />
+							Planning
+						</li>
 					</ul>
 				</li>
 				<li class="list-parent">
-					<button class="btn btn-parent">Company</button>
+					<button class="btn btn-parent">
+						Company
+						<img
+							src="./images/icon-arrow-down.svg"
+							alt="nav feature"
+							class="arrow"
+						/>
+						<img
+							src="./images/icon-arrow-up.svg"
+							alt="nav feature"
+							class="arrow hide"
+						/>
+					</button>
 					<ul class="hide">
 						<li class="list-child">History</li>
 						<li class="list-child">Our Team</li>
@@ -84,6 +84,10 @@
 				<li>Careers</li>
 				<li>About</li>
 			</ul>
+			<div class="button-container">
+				<button class="btn">Login</button>
+				<button class="btn register">Register</button>
+			</div>
 		</nav>
 		<main>
 			<img
