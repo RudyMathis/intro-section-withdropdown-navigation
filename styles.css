@@ -1,0 +1,98 @@
+/* - Almost White: hsl(0, 0%, 98%)
+- Medium Gray: hsl(0, 0%, 41%)
+- Almost Black: hsl(0, 0%, 8%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 18px
+
+### Font
+- Family: [Epilogue](https://fonts.google.com/specimen/Epilogue)
+- Weights: 500, 700 */
+
+/* golbal */
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+:root {
+    --Medium-Grey: hsl(0, 0%, 41%);
+    --Almost-Black: hsl(0, 0%, 8%);
+    --White: hsl(0,0%, 100%);
+}   
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family: 'Epilogue', sans-serif;
+    line-height: 1.2rem;
+}
+
+h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--Almost-Black);
+    margin: .5em 0;
+}
+
+p {
+    font-weight: 500;
+    color: var(--Medium-Grey);
+    margin: 1em 0;
+}
+
+
+body { 
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    /* margin-bottom: 1em; */
+    padding: 1em;
+}
+
+/* main */
+
+main {
+    text-align: center;
+
+}
+
+.hero-mobile {
+    max-width: 100%;
+    margin-bottom: 2em;
+}
+
+.hero-desktop {
+    display: none;
+}
+
+.learn-more {
+    margin-bottom: 2em;
+    padding: .75em;
+    border-radius: .75em;
+    border: 1px solid var(--Almost-Black);
+    background-color: var(--Almost-Black);
+    color: var(--White);
+}
+
+/* footer */
+
+footer {
+    display: flex;
+    align-items: center;
+}
+
+.client {
+    max-width: 75px;
+    max-height: 26px;
+    margin-right: 1.8em;
+}
