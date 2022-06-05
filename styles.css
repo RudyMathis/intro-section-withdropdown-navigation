@@ -66,7 +66,7 @@ li {
     position: absolute;
     z-index: 0;
     background-color: var(--Almost-Black);
-    opacity: .75;
+    /* opacity: .75; */
     height: 100%;
     width: 100%;
 }
@@ -87,6 +87,7 @@ header {
     width: 65%;
     z-index: 2;
     padding: 4em 2em;
+    animation: .75s 1 slidein;
 }
 
 .menu-close {
@@ -161,4 +162,96 @@ footer {
     margin-right: 1.8em;
 }
 
-/* animation for menu */
+
+/* animation */
+
+/* menu */
+.animate-in {
+    animation: slide-in 0.25s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.animate-out {
+    animation: slide-out 0.25s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/* modal */
+.fade-in {
+    animation: fade-in .25s ease-out both;
+}
+
+.fade-out {
+    animation: fade-out .25s ease-out both;
+}
+
+/* menu-open */
+.blur-out-expand {
+    /* animation: blur-out-expand .25s cubic-bezier(0.250, 0.460, 0.450, 0.940); */
+    /* animation: blur-out-expand .25s cubic-bezier(0.250, 0.460, 0.450, 0.940) backwards; */
+    animation: blur-out-contract .25s cubic-bezier(0.550, 0.085, 0.680, 0.530) reverse;
+}
+
+/* menu-close */
+.blur-out-contract {
+    animation: blur-out-contract .25s cubic-bezier(0.550, 0.085, 0.680, 0.530);
+}
+
+
+@keyframes slide-in {
+    0% {
+
+                transform: translateX(100px);
+    }
+    100% {
+                transform: translateX(0px);
+    }
+    }
+@keyframes slide-out {
+    0% {
+                transform: translateX(0);
+    }
+    100% {
+                transform: translateX(250px);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+    opacity: 0;
+    }
+    100% {
+    opacity: .75;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+    opacity: .75;
+    }
+    100% {
+    opacity: 0;
+    }
+}
+
+@keyframes blur-out-expand {
+    0% {
+        /* -webkit-filter: blur(0.01); */
+                filter: blur(0.01);
+      }
+      100% {
+        letter-spacing: 1em;
+        /* -webkit-filter: blur(12px) opacity(0%); */
+                filter: blur(12px) opacity(0%);
+      }
+    }
+    
+
+
+@keyframes blur-out-contract {
+    0% {
+        filter: blur(0.01);
+    }
+    100% {
+    letter-spacing: -0.5em;
+        filter: blur(12px) opacity(0%);
+    }
+}
