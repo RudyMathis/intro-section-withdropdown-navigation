@@ -6,57 +6,23 @@ const modal = document.querySelector(".modal");
 const hide = document.querySelector(".hide");
 const menuOpen = document.querySelector(".menu-open");
 
+
+
+
 btn.addEventListener("click", ()=>{
 
     setTimeout(() => {
         toggleFunction(menu, menuClose, menuOpen, modal);
     }, 250);
-
-    // toggleAnimateFunction(menu, modal, menuOpen, menuClose);
-    // removeAnimateFunction(menu, modal, menuOpen, menuClose);
     
     if(menu.classList.contains("hide")){
         addAnimateInFunction(menu, modal, menuOpen, menuClose);
-        removeAnimateOutFunction(menu, modal, menuOpen, menuClose)
-        // menu.classList.add("animate-in");
-        // menu.classList.remove("animate-out");
-        
-        // addAnimateFunction(menu, modal);
-        // removeAnimateFunction(menu, modal);
-        // removeAnimateFunction(menu, modal, menuOpen, menuClose);
-        // removeFunction(menu, menuClose, menuOpen, modal);
-        
-        // menuOpen.classList.add("blur-out-expand");
-        // menuOpen.classList.remove("blur-out-contract");
-        
-        // menuClose.classList.remove("blur-out-contract");
-        // menuClose.classList.remove("blur-out-contract");
-        
-        // btn.classList.toggle("blur-out-expand");
-        // btn.classList.remove("blur-out-contract");
+        removeAnimateOutFunction(menu, modal, menuOpen, menuClose);
+    
 
-        // modal.classList.add("fade-in");
-        // modal.classList.remove("fade-out");
-        
-        console.log("show");
     } else {
         addAnimateOutFunction(menu, modal, menuOpen, menuClose);
-        removeAnimateinFunction(menu, modal, menuOpen, menuClose)
-        // menu.classList.remove("animate-in");
-        // menu.classList.add("animate-out");
-
-        // menuClose.classList.remove("blur-out-contract");
-        // menuClose.classList.remove("blur-out-contract");
-
-        // menuOpen.classList.add("blur-out-contract");
-        // menuOpen.classList.add("blur-out-contract");
-
-        // btn.classList.remove("blur-out-expand");
-        // btn.classList.toggle("blur-out-contract");
-
-        // modal.classList.remove("fade-in");
-        // modal.classList.add("fade-out");
-        console.log("hide");
+        removeAnimateInFunction(menu, modal, menuOpen, menuClose);
     }
 
 });
@@ -65,10 +31,14 @@ btn.addEventListener("click", ()=>{
 listParent.forEach((btn) => {
     btn.addEventListener('click', (e) => {
         answer = btn.lastElementChild;
-        flipUP = btn.firstElementChild.firstElementChild;
+        flipUp = btn.firstElementChild.firstElementChild;
         flipDown = btn.firstElementChild.firstElementChild.nextElementSibling;
 
-        toggleFunction(answer, flipUP, flipDown);
+        toggleFunction(answer, flipUp, flipDown);
+
+        answer.classList.add("slide-bottom");
+        // fix: make it so feature returns to default when menu is closed
+
 
     });
 });
@@ -80,28 +50,24 @@ function toggleFunction(...args){
     });
 }
 
+
 function addAnimateInFunction(a, b, c, d){
     a.classList.add("animate-in");
     b.classList.add("fade-in");
     c.classList.add("blur-out-contract");
     d.classList.add("blur-out-expand");
 }
-// function addFunction(...args){
-//     args.forEach((element)=>{
-//         element.classList.add();
-//     });
-// }
+
 
 function addAnimateOutFunction(a,b,c,d){
     a.classList.add("animate-out");
     b.classList.add("fade-out");
-    c.classList.add("blur-out-contract");
-    d.classList.add("blur-out-expand");
+    c.classList.add("blur-out-expand");
+    d.classList.add("blur-out-contract");
 }
 
 
-
-function removeAnimateinFunction(a, b, c, d){
+function removeAnimateInFunction(a, b, c, d){
     a.classList.remove("animate-in");
     b.classList.remove("fade-in");
     c.classList.remove("blur-out-contract");
@@ -111,20 +77,8 @@ function removeAnimateinFunction(a, b, c, d){
 function removeAnimateOutFunction(a, b, c, d){
     a.classList.remove("animate-out");
     b.classList.remove("fade-out");
-    c.classList.remove("blur-out-contract");
-    d.classList.remove("blur-out-expand");
+    c.classList.remove("blur-out-expand");
+    d.classList.remove("blur-out-contract");
 }
 
-// function toggleAnimateFunction(a,b){
-//     a.classList.toggle("animate-in")
-//     b.classList.toggle("fade-in")
-//     d.classList.toggle("blur-out-expand")
-//     c.classList.toggle("blur-out-contract")
-// }
-    
     // change variable names to be more appropriate
-    // if(element.classList.contains("menu")){
-    //     element.classList.add("animate-in");
-    //     console.log("hello");
-    
-    // } 
