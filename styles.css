@@ -66,7 +66,6 @@ li {
     position: absolute;
     z-index: 0;
     background-color: var(--Almost-Black);
-    /* opacity: .75; */
     height: 100%;
     width: 100%;
 }
@@ -87,17 +86,12 @@ header {
     width: 65%;
     z-index: 2;
     padding: 4em 2em;
-    animation: .75s 1 slidein;
 }
 
 .menu-close {
     position:relative;
     z-index: 3;
 }
-
-/* .list-parent{
-
-} */
 
 .list-child{
     text-indent: 20px;
@@ -165,6 +159,10 @@ footer {
 
 /* animation */
 
+.slide{
+    animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
 /* menu */
 .animate-in {
     animation: slide-in 0.25s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -181,25 +179,6 @@ footer {
 
 .fade-out {
     animation: fade-out .25s ease-out both;
-}
-
-/* menu-open */
-.blur-out-expand {
-    animation: blur-out-contract .25s cubic-bezier(0.550, 0.085, 0.680, 0.530) reverse;
-    
-}
-
-/* menu-close */
-.blur-out-contract {
-    animation: blur-out-contract .25s cubic-bezier(0.550, 0.085, 0.680, 0.530);
-}
-
-.slide-bottom {
-	animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-.slide-top {
-	animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) reverse both;
 }
 
 
@@ -238,33 +217,50 @@ footer {
     }
 }
 
-@keyframes blur-out-expand {
-    0% {
-        filter: blur(0.01);
-    }
-    100% {
-        letter-spacing: 1em;
-        filter: blur(12px) opacity(0%);
-    }
-}
 
-@keyframes blur-out-contract {
-    0% {
-        filter: blur(0.01);
-    }
-    100% {
-    letter-spacing: -0.5em;
-        filter: blur(12px) opacity(0%);
-    }
-}
+@media only screen and (min-width: 1024px){
+    /* body{
+        flex-direction: row-reverse;
+    } */
 
-@keyframes slide-bottom {
-    0% {
-        transform: translateY(-100px);
-        opacity: 0;
+    main{
+        display: flex;
+        flex-direction: row-reverse;
     }
-    100% {
-        transform: translateY(0px);
-        opacity: 1;
+    .content {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        justify-content: center;
+        margin: 0 3em;
+    }
+    
+    h1 {
+        font-size: 4.2rem;
+        margin: 1em 0 0 0;
+        line-height: 3.6rem;
+    }
+    
+    p {
+        font-weight: 500;
+        color: var(--Medium-Grey);
+        line-height: 1.5rem;
+        margin: 3em 4em 2em 0;
+    }
+
+
+    /* .logo{
+        width: 4em;
+        height: 2em;
+    } */
+    .hero-mobile {
+        display: none;
+    }
+    
+    .hero-desktop {
+        display: block;
+        max-width: 40%;
+        margin-top: 2em;
     }
 }

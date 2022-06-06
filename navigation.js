@@ -2,11 +2,10 @@ const menu = document.querySelector(".menu");
 const btn = document.querySelector(".btn");
 const menuClose = document.querySelector(".menu-close");
 const listParent = document.querySelectorAll(".list-parent");
+const menuList = document.querySelectorAll(".menu-list");
 const modal = document.querySelector(".modal");
 const hide = document.querySelector(".hide");
 const menuOpen = document.querySelector(".menu-open");
-
-
 
 
 btn.addEventListener("click", ()=>{
@@ -14,15 +13,14 @@ btn.addEventListener("click", ()=>{
     setTimeout(() => {
         toggleFunction(menu, menuClose, menuOpen, modal);
     }, 250);
-    
+
     if(menu.classList.contains("hide")){
-        addAnimateInFunction(menu, modal, menuOpen, menuClose);
-        removeAnimateOutFunction(menu, modal, menuOpen, menuClose);
-    
+        addAnimateInFunction(menu, modal);
+        removeAnimateOutFunction(menu, modal);
 
     } else {
-        addAnimateOutFunction(menu, modal, menuOpen, menuClose);
-        removeAnimateInFunction(menu, modal, menuOpen, menuClose);
+        addAnimateOutFunction(menu, modal);
+        removeAnimateInFunction(menu, modal);
     }
 
 });
@@ -35,13 +33,12 @@ listParent.forEach((btn) => {
         flipDown = btn.firstElementChild.firstElementChild.nextElementSibling;
 
         toggleFunction(answer, flipUp, flipDown);
-
-        answer.classList.add("slide-bottom");
         // fix: make it so feature returns to default when menu is closed
 
 
     });
 });
+
 
 
 function toggleFunction(...args){
@@ -51,34 +48,27 @@ function toggleFunction(...args){
 }
 
 
-function addAnimateInFunction(a, b, c, d){
+function addAnimateInFunction(a, b){
     a.classList.add("animate-in");
     b.classList.add("fade-in");
-    c.classList.add("blur-out-contract");
-    d.classList.add("blur-out-expand");
 }
 
 
-function addAnimateOutFunction(a,b,c,d){
+function addAnimateOutFunction(a,b){
     a.classList.add("animate-out");
     b.classList.add("fade-out");
-    c.classList.add("blur-out-expand");
-    d.classList.add("blur-out-contract");
 }
 
 
-function removeAnimateInFunction(a, b, c, d){
+function removeAnimateInFunction(a, b){
     a.classList.remove("animate-in");
     b.classList.remove("fade-in");
-    c.classList.remove("blur-out-contract");
-    d.classList.remove("blur-out-expand");
 }
 
-function removeAnimateOutFunction(a, b, c, d){
+function removeAnimateOutFunction(a, b){
     a.classList.remove("animate-out");
     b.classList.remove("fade-out");
-    c.classList.remove("blur-out-expand");
-    d.classList.remove("blur-out-contract");
 }
+
 
     // change variable names to be more appropriate
