@@ -16,8 +16,8 @@
 	<body>
 		<div class="modal hide"></div>
 		<header>
-			<img class="logo" src="./images/logo.svg" alt="Snap-Logo" />
-			<button class="btn">
+			<img class="snap-logo" src="./images/logo.svg" alt="Snap-Logo" />
+			<button class="btn menu-btn">
 				<img src="./images/icon-menu.svg" alt="icon-menu" class="menu-open" />
 				<img
 					src="./images/icon-close-menu.svg"
@@ -25,70 +25,127 @@
 					class="menu-close hide"
 				/>
 			</button>
-		</header>
-		<!-- navigation -->
-		<nav class="menu hide">
-			<ul>
-				<li class="list-parent">
-					<button class="btn btn-parent">
-						Features
-						<img
-							src="./images/icon-arrow-down.svg"
-							alt="nav feature"
-							class="arrow"
-						/>
-						<img
-							src="./images/icon-arrow-up.svg"
-							alt="nav feature"
-							class="arrow hide"
-						/>
-					</button>
-					<ul class="menu-list hide">
-						<li class="list-child">
-							<img src="./images/icon-todo.svg" alt="icon-todo" /> Todo List
-						</li>
-						<li class="list-child">
-							<img src="./images/icon-calendar.svg" alt="icon-calendar" />
-							Calendar
-						</li>
-						<li class="list-child">
-							<img src="./images/icon-reminders.svg" alt="icon-reminders" />
-							Reminders
-						</li>
-						<li class="list-child">
-							<img src="./images/icon-planning.svg" alt="icon-planning" />
-							Planning
-						</li>
-					</ul>
-				</li>
-				<li class="list-parent">
-					<button class="btn btn-parent">
-						Company
-						<img
-							src="./images/icon-arrow-down.svg"
-							alt="nav feature"
-							class="arrow"
-						/>
-						<img
-							src="./images/icon-arrow-up.svg"
-							alt="nav feature"
-							class="arrow hide"
-						/>
-					</button>
-					<ul class="menu-list hide">
-						<li class="list-child">History</li>
-						<li class="list-child">Our Team</li>
-						<li class="list-child">Blog</li>
-					</ul>
-				</li>
-				<li>Careers</li>
-				<li>About</li>
-			</ul>
+			<nav class="menu hide">
+				<ul class="main-menu-list">
+					<li class="list-parent">
+						<button class="btn btn-parent">
+							Features
+							<img
+								src="./images/icon-arrow-down.svg"
+								alt="nav feature"
+								class="arrow"
+							/>
+							<img
+								src="./images/icon-arrow-up.svg"
+								alt="nav feature"
+								class="arrow hide"
+							/>
+						</button>
+						<ul class="menu-list hide">
+							<li class="list-child">
+								<img src="./images/icon-todo.svg" alt="icon-todo" /> Todo List
+							</li>
+							<li class="list-child">
+								<img src="./images/icon-calendar.svg" alt="icon-calendar" />
+								Calendar
+							</li>
+							<li class="list-child">
+								<img src="./images/icon-reminders.svg" alt="icon-reminders" />
+								Reminders
+							</li>
+							<li class="list-child">
+								<img src="./images/icon-planning.svg" alt="icon-planning" />
+								Planning
+							</li>
+						</ul>
+					</li>
+					<li class="list-parent">
+						<button class="btn btn-parent">
+							Company
+							<img
+								src="./images/icon-arrow-down.svg"
+								alt="nav feature"
+								class="arrow"
+							/>
+							<img
+								src="./images/icon-arrow-up.svg"
+								alt="nav feature"
+								class="arrow hide"
+							/>
+						</button>
+						<ul class="menu-list hide">
+							<li class="list-child">History</li>
+							<li class="list-child">Our Team</li>
+							<li class="list-child">Blog</li>
+						</ul>
+					</li>
+					<li>Careers</li>
+					<li>About</li>
+				</ul>
+				<ul class="desktop-menu-list">
+					<li class="list-parent">
+						<button class="btn btn-parent">
+							Features
+							<img
+								src="./images/icon-arrow-down.svg"
+								alt="nav feature"
+								class="arrow"
+							/>
+							<img
+								src="./images/icon-arrow-up.svg"
+								alt="nav feature"
+								class="arrow hide"
+							/>
+						</button>
+						<ul class="menu-list-features hide">
+							<li class="list-child">
+								<img src="./images/icon-todo.svg" alt="icon-todo" /> Todo List
+							</li>
+							<li class="list-child">
+								<img src="./images/icon-calendar.svg" alt="icon-calendar" />
+								Calendar
+							</li>
+							<li class="list-child">
+								<img src="./images/icon-reminders.svg" alt="icon-reminders" />
+								Reminders
+							</li>
+							<li class="list-child">
+								<img src="./images/icon-planning.svg" alt="icon-planning" />
+								Planning
+							</li>
+						</ul>
+					</li>
+					<li class="list-parent">
+						<button class="btn btn-parent">
+							Company
+							<img
+								src="./images/icon-arrow-down.svg"
+								alt="nav feature"
+								class="arrow"
+							/>
+							<img
+								src="./images/icon-arrow-up.svg"
+								alt="nav feature"
+								class="arrow hide"
+							/>
+						</button>
+						<ul class="menu-list-company hide">
+							<li class="list-child">History</li>
+							<li class="list-child">Our Team</li>
+							<li class="list-child">Blog</li>
+						</ul>
+					</li>
+					<li>Careers</li>
+					<li>About</li>
+				</ul>
+			</nav>
 			<div class="button-container">
 				<button class="btn">Login</button>
 				<button class="btn register">Register</button>
 			</div>
-		</nav>
+		</header>
+		<!-- navigation -->
+
 		<main>
 			<img
 				src="./images/image-hero-mobile.png"
@@ -97,7 +154,7 @@
 			/>
 			<img
 				src="./images/image-hero-desktop.png"
-				alt="image-hero-mobile"
+				alt="image-hero-desktop"
 				class="hero hero-desktop"
 			/>
 			<section class="content">
@@ -107,29 +164,29 @@
 					create team rituals, and watch productivity soar.
 				</p>
 				<button type="button" class="learn-more clickable">Learn more</button>
+				<section class="footer-logo">
+					<img
+						src="./images/client-databiz.svg"
+						alt="client-databiz"
+						class="client clickable"
+					/>
+					<img
+						src="./images/client-audiophile.svg"
+						alt="client-audiophile"
+						class="client clickable"
+					/>
+					<img
+						src="./images/client-meet.svg"
+						alt="client-meet"
+						class="client clickable"
+					/>
+					<img
+						src="./images/client-maker.svg"
+						alt="client-maker"
+						class="client clickable"
+					/>
+				</section>
 			</section>
 		</main>
-		<footer>
-			<img
-				src="./images/client-databiz.svg"
-				alt="client-databiz"
-				class="client clickable"
-			/>
-			<img
-				src="./images/client-audiophile.svg"
-				alt="client-audiophile"
-				class="client clickable"
-			/>
-			<img
-				src="./images/client-meet.svg"
-				alt="client-meet"
-				class="client clickable"
-			/>
-			<img
-				src="./images/client-maker.svg"
-				alt="client-maker"
-				class="client clickable"
-			/>
-		</footer>
 	</body>
 </html>

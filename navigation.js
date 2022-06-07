@@ -17,12 +17,10 @@ btn.addEventListener("click", ()=>{
     if(menu.classList.contains("hide")){
         addAnimateInFunction(menu, modal);
         removeAnimateOutFunction(menu, modal);
-
     } else {
         addAnimateOutFunction(menu, modal);
         removeAnimateInFunction(menu, modal);
     }
-
 });
 
 
@@ -33,13 +31,10 @@ listParent.forEach((btn) => {
         flipDown = btn.firstElementChild.firstElementChild.nextElementSibling;
 
         toggleFunction(answer, flipUp, flipDown);
-        // fix: make it so feature returns to default when menu is closed
-
-
     });
 });
 
-
+// function for hide and animation
 
 function toggleFunction(...args){
     args.forEach((element)=>{
@@ -70,5 +65,23 @@ function removeAnimateOutFunction(a, b){
     b.classList.remove("fade-out");
 }
 
+// media query
 
-    // change variable names to be more appropriate
+window.addEventListener("load", ()=>{
+    mediaQuery();
+})
+
+window.addEventListener("resize",()=>{
+    mediaQuery();
+})
+
+function mediaQuery(){
+    if (window.innerWidth >= 1024) 
+    {
+        menu.classList.remove("hide");
+    } else {
+        menu.classList.add("hide");
+    }
+}
+
+// change variable names to be more appropriate
