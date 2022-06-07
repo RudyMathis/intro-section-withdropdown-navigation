@@ -2,7 +2,6 @@ const menu = document.querySelector(".menu");
 const btn = document.querySelector(".btn");
 const menuClose = document.querySelector(".menu-close");
 const listParent = document.querySelectorAll(".list-parent");
-const menuList = document.querySelectorAll(".menu-list");
 const modal = document.querySelector(".modal");
 const hide = document.querySelector(".hide");
 const menuOpen = document.querySelector(".menu-open");
@@ -23,14 +22,13 @@ btn.addEventListener("click", ()=>{
     }
 });
 
-
 listParent.forEach((btn) => {
     btn.addEventListener('click', (e) => {
-        answer = btn.lastElementChild;
+        menuList = btn.lastElementChild;
         flipUp = btn.firstElementChild.firstElementChild;
         flipDown = btn.firstElementChild.firstElementChild.nextElementSibling;
 
-        toggleFunction(answer, flipUp, flipDown);
+        toggleFunction(menuList, flipUp, flipDown);
     });
 });
 
@@ -42,27 +40,24 @@ function toggleFunction(...args){
     });
 }
 
-
-function addAnimateInFunction(a, b){
-    a.classList.add("animate-in");
-    b.classList.add("fade-in");
+function addAnimateInFunction(animate, fade){
+    animate.classList.add("animate-in");
+    fade.classList.add("fade-in");
 }
 
-
-function addAnimateOutFunction(a,b){
-    a.classList.add("animate-out");
-    b.classList.add("fade-out");
+function addAnimateOutFunction(animate, fade){
+    animate.classList.add("animate-out");
+    fade.classList.add("fade-out");
 }
 
-
-function removeAnimateInFunction(a, b){
-    a.classList.remove("animate-in");
-    b.classList.remove("fade-in");
+function removeAnimateInFunction(animate, fade){
+    animate.classList.remove("animate-in");
+    fade.classList.remove("fade-in");
 }
 
-function removeAnimateOutFunction(a, b){
-    a.classList.remove("animate-out");
-    b.classList.remove("fade-out");
+function removeAnimateOutFunction(animate, fade){
+    animate.classList.remove("animate-out");
+    fade.classList.remove("fade-out");
 }
 
 // media query
@@ -83,5 +78,3 @@ function mediaQuery(){
         menu.classList.add("hide");
     }
 }
-
-// change variable names to be more appropriate
